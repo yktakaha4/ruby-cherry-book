@@ -6,8 +6,8 @@ GEM
     debug (1.10.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
-    faker (3.5.1)
-      i18n (>= 1.8.11, < 2)
+    faker (2.16.0)
+      i18n (>= 1.6, < 2)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
@@ -29,7 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   debug
-  faker
+  faker (= 2.16.0)
   minitest
 
 BUNDLED WITH
