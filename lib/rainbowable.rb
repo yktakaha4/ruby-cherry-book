@@ -1,14 +1,8 @@
 module Rainbowable
   def rainbow
-    str = self.to_s
-    count = 0
-    colored_chars = []
-    str.each_char do |char|
-      color = 31 + count % 6
-      colored_chars << "\e[#{color}m#{char}"
-      count += 1
-    end
-    colored_chars << "\e[0m"
-    colored_chars.join
+    to_s.each_char.map.with_index do |char, index|
+      color = index % 6 + 31
+      "\e[#{color}m#{char}"
+    end.join + "\e[0m"
   end
 end
